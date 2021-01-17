@@ -14,9 +14,12 @@ message = input("What is your message? ")
 # Todo: Translate user input into code of numbers
 
 coded_message = ""
-for char in message:
-    coded_char = str(code[char])
-    coded_message += coded_char
+for char in message.lower():
+    if char in code:
+        coded_char = str(code[char])
+    else:
+        coded_char = char
+    coded_message += coded_char + ' '
 
 
 print(coded_message)
