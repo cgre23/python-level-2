@@ -15,13 +15,27 @@ def equals(actual, expected):
 
 
 # Todo: Create a function that produces the factorial of a number
+def factorial(n):
+    product=1
+    for i in range(1, n+1):
+        product *= i
+    return product
 
 
 # Todo: Test factorial function
+equals(factorial(0), 1)
+equals(factorial(1), 1)
+equals(factorial(2), 2)
+equals(factorial(4), 24)
 
 
 # Todo: Request a number from the user
+user_num= int(input("Enter a number: "))
 
 
 # Todo: Print a list of factorials from 0 to the given number
+factorial_list = []
+for i in range(user_num+1):
+    factorial_list.append(factorial(i))
 
+print(factorial_list)

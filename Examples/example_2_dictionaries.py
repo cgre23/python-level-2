@@ -5,8 +5,10 @@ book_3 = {"title": "1984", "author": "George Orwell", "published_year": 1949}
 
 books = [book_1, book_2, book_3]
 
+
 def book_sort_key(book):
     return book['published_year']
+
 
 books.sort(key=lambda book: book['published_year'])
 
